@@ -17,6 +17,10 @@ public function __construct(){
 
 
 }
+public function __destruct(){
+	mysqli_close($this->connection);
+
+}
 
 /**
  * connectToDb establishes database connection

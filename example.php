@@ -41,24 +41,17 @@ $query = "insert into guestbook (user, message, DATE) values ('user', 'a message
 $result = $db->query($query);
 
 //$result will return false if query was unsucsessful
-if($result){
-	echo "<br> successfully inserted ";
-}
+echo ($result) ? "<br> Successfully inserted" : "<br> Insert query was not successfull";
 
 //update a row in table
 $query = "update guestbook set user = 'user1' where id = 3";
 $result = $db->query($query);
-
-if($result){
-	echo "<br> successfully updated ";
-}
+echo ($result) ? "<br> Successfully update" : "<br> Update query was not successfull";
 
 //delete a row in table
 $query = "delete from guestbook where id = 2";
 $result = $db->query($query);
-if($result){
-	echo "<br> successfully deleted ";
-}
+echo ($result) ? "<br> Successfully deleted" : "<br> Delete query was not successfull";
 
 
 ?>
